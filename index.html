@@ -3,36 +3,446 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cullip Family — Real Farmers. Real Results.</title>
+<title>April Cullip — Farm Wife. Mama. Entrepreneur.</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 <style>
-body{margin:0;font-family:'Lato',sans-serif;background:#1a2a0f;color:#F5F0E8;}
-.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 24px;background:linear-gradient(160deg,#2C1F0E 0%,#4A5E3A 60%,#6B4C2A 100%);}
-.tag{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#C49A3C;margin-bottom:12px;}
-h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,8vw,3.5rem);color:#F5F0E8;line-height:1.1;margin-bottom:16px;}
-h1 em{color:#C49A3C;font-style:italic;}
-.sub{font-size:1rem;color:rgba(245,240,232,0.75);max-width:360px;line-height:1.7;margin-bottom:36px;}
-.story{padding:60px 24px;max-width:680px;margin:0 auto;text-align:center;}
-.story h2{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,5vw,2.2rem);color:#C49A3C;margin-bottom:24px;}
-.story p{font-size:1rem;line-height:1.85;color:#F5F0E8;margin-bottom:16px;}
-.cta{background:linear-gradient(135deg,#4A5E3A 0%,#2C1F0E 100%);padding:60px 24px;text-align:center;}
-.cta h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,6vw,2.8rem);color:#F5F0E8;margin-bottom:24px;}
-.btn-group{display:flex;flex-direction:column;gap:14px;max-width:360px;margin:0 auto;}
-.btn{display:block;padding:18px 32px;border-radius:4px;font-size:0.9rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-decoration:none;text-align:center;}
-.btn-primary{background:#C49A3C;color:#2C1F0E;}
-.btn-secondary{background:transparent;color:#F5F0E8;border:2px solid rgba(245,240,232,0.4);}
-footer{background:#2C1F0E;padding:24px;text-align:center;color:rgba(245,240,232,0.35);font-size:0.78rem;}
-footer a{color:#C49A3C;text-decoration:none;}
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #F5F0E8;
+    --warm-brown: #6B4C2A;
+    --gold: #C49A3C;
+    --dark: #2C1F0E;
+    --green: #4A5E3A;
+    --light-green: #8FA67A;
+  }
+
+  body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--cream);
+    color: var(--dark);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Hero */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 24px 40px;
+    background: linear-gradient(160deg, #2C1F0E 0%, #4A5E3A 60%, #6B4C2A 100%);
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.4;
+  }
+
+  .hero-photo-placeholder {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid var(--gold);
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 1;
+    animation: fadeDown 0.8s ease both;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    background: linear-gradient(135deg, #4A5E3A, #6B4C2A);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 56px;
+  }
+
+  .hero-tag {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: var(--gold);
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
+    animation: fadeDown 0.8s 0.1s ease both;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2rem, 8vw, 3.8rem);
+    color: var(--cream);
+    line-height: 1.1;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 1;
+    animation: fadeDown 0.8s 0.2s ease both;
+  }
+
+  .hero h1 em {
+    color: var(--gold);
+    font-style: italic;
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+    color: rgba(245,240,232,0.75);
+    max-width: 360px;
+    line-height: 1.7;
+    margin-bottom: 36px;
+    position: relative;
+    z-index: 1;
+    animation: fadeDown 0.8s 0.3s ease both;
+  }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(245,240,232,0.4);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: bounce 2s infinite;
+    z-index: 1;
+  }
+
+  /* Story Section */
+  .story {
+    padding: 72px 24px;
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+    font-weight: 700;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 5vw, 2.4rem);
+    color: var(--warm-brown);
+    margin-bottom: 24px;
+    line-height: 1.3;
+  }
+
+  .story p {
+    font-size: 1rem;
+    line-height: 1.85;
+    color: #4a3a28;
+    margin-bottom: 16px;
+  }
+
+  .divider {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--light-green));
+    margin: 40px auto;
+    border-radius: 2px;
+  }
+
+  /* Values Strip */
+  .values {
+    background: var(--dark);
+    padding: 48px 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  .value-item {
+    text-align: center;
+    color: var(--cream);
+    flex: 1;
+    min-width: 120px;
+    max-width: 180px;
+  }
+
+  .value-icon {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  .value-item h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+
+  .value-item p {
+    font-size: 0.78rem;
+    color: rgba(245,240,232,0.55);
+    letter-spacing: 0.5px;
+  }
+
+  /* What I Offer */
+  .offer {
+    padding: 72px 24px;
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .offer h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 5vw, 2.2rem);
+    color: var(--warm-brown);
+    margin-bottom: 12px;
+  }
+
+  .offer > p {
+    color: #4a3a28;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    font-size: 1rem;
+  }
+
+  .offer-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .offer-card {
+    background: white;
+    border-left: 4px solid var(--gold);
+    padding: 24px;
+    text-align: left;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 2px 16px rgba(107,76,42,0.08);
+  }
+
+  .offer-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: var(--warm-brown);
+    margin-bottom: 6px;
+  }
+
+  .offer-card p {
+    font-size: 0.9rem;
+    color: #5a4a38;
+    line-height: 1.6;
+  }
+
+  /* CTA Buttons */
+  .cta-section {
+    background: linear-gradient(135deg, var(--green) 0%, var(--dark) 100%);
+    padding: 72px 24px;
+    text-align: center;
+  }
+
+  .cta-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 6vw, 2.8rem);
+    color: var(--cream);
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+
+  .cta-section h2 em {
+    color: var(--gold);
+    font-style: italic;
+  }
+
+  .cta-section p {
+    color: rgba(245,240,232,0.7);
+    margin-bottom: 40px;
+    font-size: 1rem;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+  }
+
+  .btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 18px 32px;
+    border-radius: 4px;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--dark);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--cream);
+    border: 2px solid rgba(245,240,232,0.4);
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+
+  /* Footer */
+  footer {
+    background: var(--dark);
+    padding: 32px 24px;
+    text-align: center;
+    color: rgba(245,240,232,0.35);
+    font-size: 0.78rem;
+    letter-spacing: 1px;
+  }
+
+  footer a {
+    color: var(--gold);
+    text-decoration: none;
+  }
+
+  /* Animations */
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(8px); }
+  }
 </style>
 </head>
 <body>
+
+<!-- HERO -->
 <section class="hero">
-<p class="tag">Real Farmers · Real Family · Real Results</p>
-<h1>Hey, we're April & Dustin.<br>Farming family.<br>We <em>figured it out.</em></h1>
-<p class="sub">Full time farmers. Homeschool parents. Working side by side every single day — and building something bigger alongside the life we already love.</p>
+  <div class="hero-photo-placeholder">🌾</div>
+  <p class="hero-tag">Real Farmers · Real Family · Real Results</p>
+  <h1>Hey, we're April & Dustin.<br>Farming family.<br>We <em>figured it out.</em></h1>
+  <p class="hero-sub">Full time farmers. Homeschool parents. Working side by side every single day — and building something bigger alongside the life we already love.</p>
+  <p class="scroll-hint">↓ keep reading</p>
 </section>
+
+<!-- STORY -->
 <section class="story">
-<h2>We used to let the market decide what our family was worth.</h2>
-<p>For years we let cattle prices, grain prices, and produce prices decide what our family was worth. Always something else controlling our future. We were tired of it.</p>
-<p>Farming comes with debt that no 9 to 5 will ever pay back. We know that better than anyone. We weren't looking for a shortcut — we were looking for something real that could actually move the needle for a hardworking family like ours.</p>
-<p>We didn't come into this for the health side. We came in because we needed another income stream that matched our work ethic. But somewhere along the way the product changed us physically too. That's when we knew
+  <p class="section-label">Our Story</p>
+  <h2>We used to let the market decide what our family was worth.</h2>
+  <p>For years we let cattle prices, grain prices, and produce prices decide what our family was worth. Always something else controlling our future. We were tired of it.</p>
+  <p>Farming comes with debt that no 9 to 5 will ever pay back. We know that better than anyone. We weren't looking for a shortcut — we were looking for something real that could actually move the needle for a hardworking family like ours.</p>
+  <p>We didn't come into this for the health side. We came in because we needed another income stream that matched our work ethic. But somewhere along the way the product changed us physically too. That's when we knew this was something different.</p>
+  <p>That's what farming communities do. We don't twist arms — we lock arms. We help each other make it. If you're a hardworking farm family carrying debt and ready for a real way forward — we'd love to talk. 🌾</p>
+  <div class="divider"></div>
+</section>
+
+<!-- VALUES -->
+<div class="values">
+  <div class="value-item">
+    <div class="value-icon">🌱</div>
+    <h3>Real Life</h3>
+    <p>No fake highlight reel. Just what's actually working.</p>
+  </div>
+  <div class="value-item">
+    <div class="value-icon">🐄</div>
+    <h3>Farm First</h3>
+    <p>Built around the life we already had.</p>
+  </div>
+  <div class="value-item">
+    <div class="value-icon">👨‍👩‍👧‍👦</div>
+    <h3>Family Built</h3>
+    <p>Husband, wife, and kids — all in together.</p>
+  </div>
+  <div class="value-item">
+    <div class="value-icon">🔥</div>
+    <h3>It Works</h3>
+    <p>Real results for hardworking farm families.</p>
+  </div>
+</div>
+
+<!-- OFFER -->
+<section class="offer">
+  <p class="section-label">What We Do</p>
+  <h2>Here's how we can help you</h2>
+  <p>Whether you're a farm husband, a farm wife, a ranching family, or just someone who knows one income stream isn't enough — we've been where you are and we found a way out.</p>
+
+  <div class="offer-cards">
+    <div class="offer-card">
+      <h3>📞 Book a Free Call With Us</h3>
+      <p>15 minutes with April. No pressure. No hype. Just a real conversation about what's possible for your family — from a farming family who's living it.</p>
+    </div>
+    <div class="offer-card">
+      <h3>🌾 Learn About the Opportunity</h3>
+      <p>Ready to see the full picture? Visit my site and explore what this business looks like — the real numbers, the real lifestyle, the real results.</p>
+      <div style="margin-top:12px; display:flex; flex-direction:column; gap:8px;">
+        <a href="https://13000038170.realbusiness.network/" style="font-size:0.82rem; color:var(--gold); text-decoration:none; font-weight:700;">→ Real Business Network</a>
+        <a href="https://13000038170.yourbodyiswater.info/" style="font-size:0.82rem; color:var(--gold); text-decoration:none; font-weight:700;">→ Your Body Is Water</a>
+        <a href="https://13000038170.ecokangen.com/" style="font-size:0.82rem; color:var(--gold); text-decoration:none; font-weight:700;">→ Eco Kangen</a>
+        <a href="https://13000038170.enagicweb.biz/" style="font-size:0.82rem; color:var(--gold); text-decoration:none; font-weight:700;">→ Enagic Web (.biz)</a>
+        <a href="https://13000038170.enagicweb.org/" style="font-size:0.82rem; color:var(--gold); text-decoration:none; font-weight:700;">→ Enagic Web (.org)</a>
+      </div>
+    </div>
+    <div class="offer-card">
+      <h3>💬 Send Me a DM on Facebook</h3>
+      <p>Not ready for a call yet? That's okay. Find me on Facebook and send me the word FARM. We'll start there.</p>
+      <div style="margin-top:12px;">
+        <a href="https://www.facebook.com/share/1cJpY4xwnV/?mibextid=wwXIfr" style="font-size:0.82rem; color:var(--gold); text-decoration:none; font-weight:700;">→ Find me on Facebook</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Ready to stop <em>surviving</em><br>and start building?</h2>
+  <p>We're not promising overnight success. We're offering what we found — a real opportunity for hardworking families who are willing to put in the work alongside us.</p>
+  <div class="btn-group">
+    <a href="https://calendly.com/aacullip/60min" class="btn btn-primary">📞 Book a Free Call</a>
+    <a href="https://13000038170.realbusiness.network/" class="btn btn-secondary">🌾 See the Opportunity</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 April Cullip &nbsp;·&nbsp; <a href="https://www.facebook.com/share/1cJpY4xwnV/?mibextid=wwXIfr">Follow me on Facebook</a></p>
+</footer>
+
+</body>
+</html>
